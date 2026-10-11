@@ -1,0 +1,22 @@
+/* Общий стиль C&C Family для парсера и скриптов. */
+@font-face{font-family:"Onest";src:url("/fonts/Onest.woff?v=1") format("woff");font-weight:100 900;font-display:swap}
+:root{--bg:#0e0f11;--s1:#17181b;--s2:#1f2024;--ln:#2a2b30;--tx:#f3f3f4;--mu:#8d8f95;--inv:#0e0f11}
+[data-theme=light]{--bg:#f2f2f4;--s1:#ffffff;--s2:#eaeaed;--ln:#dedee2;--tx:#111214;--mu:#6b6d73;--inv:#ffffff}
+body{font-family:"Onest",-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+#theme{display:none}
+header{border-bottom:1px solid var(--ln)}
+.brand{gap:12px}
+.cc-back{display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 12px 0 8px;border-radius:999px;border:0;background:var(--s2);color:var(--tx);font:inherit;font-weight:600;font-size:14px;cursor:pointer}
+.cc-back svg{width:18px;height:18px}
+.cc-title{font-weight:650;font-size:16px}
+.card{border-radius:20px}
+nav#tabs{left:50%;right:auto;bottom:calc(12px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(520px,calc(100% - 24px));max-width:none;
+  gap:2px;padding:6px;border-radius:999px;border:0;background:color-mix(in srgb,var(--s1) 86%,transparent);
+  backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);
+  box-shadow:inset 0 0 0 1px var(--ln),0 10px 30px rgba(0,0,0,.28)}
+nav#tabs button{flex:1 1 0;min-width:0;padding:7px 0;border-radius:999px;font-size:9.5px;letter-spacing:-.02em;gap:2px;overflow:hidden}
+nav#tabs button span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+nav#tabs .on{background:var(--s2);box-shadow:0 0 0 1px rgba(255,255,255,.6),0 0 14px rgba(255,255,255,.2)}
+[data-theme=light] nav#tabs .on{box-shadow:0 0 0 1px rgba(17,18,20,.7),0 0 12px rgba(17,18,20,.1)}
+nav#tabs .on .ic{transform:none}
+#toast{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
